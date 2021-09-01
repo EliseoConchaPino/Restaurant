@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    
+    <ion-item *ngFor="let prod of productos" [routerLink]="['/home']">
+      
+      <ion-avatar slot="start">
+        <ion-img [src]="prod.imagenURL"></ion-img>
+      </ion-avatar> 
+      
+      <ion-label>{{prod.titulo}} </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
